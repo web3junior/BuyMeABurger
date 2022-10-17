@@ -7,6 +7,7 @@ contract BuyMeABurger {
   struct Message {
     string name;
     string text;
+    uint tipValue;
     address sender;
   }
 
@@ -37,6 +38,7 @@ contract BuyMeABurger {
     messages.push(Message({
       name: _name,
       text: _text,
+      tipValue: msg.value,
       sender: payable(msg.sender)
     }));
 
