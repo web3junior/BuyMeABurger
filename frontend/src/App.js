@@ -13,6 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Card from 'react-bootstrap/Card';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
+import Badge from 'react-bootstrap/Badge';
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const CONTRACT_ADDRESS = '0x1ACB17558F64eC2254eA940adf6ab29E1239dE15';
@@ -321,7 +322,9 @@ function App() {
         <Row>
           <Navbar expand="lg">
             <Container fluid>
-              <Navbar.Brand href="/">Buy-Me-A-Burger</Navbar.Brand>
+              <Navbar.Brand href="/">
+                Buy-Me-A-Burger <Badge bg="warning" text="dark">Goerli</Badge>
+              </Navbar.Brand>
               <Form className="d-flex">
                 <Button variant="light" onClick={drakModeToggle}>
                   {darkMode ? <FaSun color='orange'/> : <FaMoon color='orange'/>}
